@@ -4,15 +4,15 @@ function VerificarCalificacion() {
     if (calificacion >= 90) {
        mensaje = "Aprobado con Honores."); 
     }else if (calificacion>=70) {
-        document.write("Aprobado. <br>"); 
+        document.write("Aprobado."); 
     }else{
-        document.write("Reprobado. <br>"); 
+        document.write("Reprobado."); 
     }
-    document.getElementById
+    document.getElementById("gradosalida").innerText = mensaje;
 }
 function determinarParidad() {
 let numero = prompt("Escribe un numero del 1 al 100: ");
-if numero%2 =! 0 {
+if numero%2 == 0 {
     document.write("El numero es par. <br>"); 
 }else {
     document.write("El numero es impar. <br>"); 
