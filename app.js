@@ -24,7 +24,7 @@ function evaluarDescuento() {
     let descuento = parseInt(document.getElementById("descuento").value);
     let mensaje = "";    
     if (descuento > 100) {
-         mensaje = "Con el 10% de descuento el nuevo monto es: "+descuento*0.9; 
+         mensaje = "Con el 10% de descuento el valor de su compra es: "+descuento*0.9; 
     }else {
         mensaje = "No aplica descuento."; 
     }
