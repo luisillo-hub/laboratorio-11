@@ -8,7 +8,7 @@ function VerificarCalificacion() {
     }else{
         mensaje = "Reprobado."; 
     }
-    document.getElementById("gradosalida").innerText = mensaje;
+    document.getElementById("gradoSalida").innerText = mensaje;
 }
 function determinarParidad() {
     let numero = parseInt(document.getElementById("numero").value);
@@ -18,17 +18,26 @@ function determinarParidad() {
     }else {
         mensaje = "El numero es impar."; 
     }
-    document.getElementById("gradosalida").innerText = mensaje;
+    document.getElementById("parImparSalida").innerText = mensaje;
 }
 function evaluarDescuento() {
     let monto = parseInt(document.getElementById("monto").value);
     let mensaje = "";    
     if (monto > 100) {
-    
+         mensaje = "Con el 10% de descuento el nuevo monto es: "+monto*0.9; 
+    }else {
+        mensaje = "No aplica descuento."; 
     }
+    document.getElementById("descuentoSalida").innerText = mensaje;
 }
 function jugarAdivinanza() {
-    let random = rand(0-10); 
+    let random = Math.ceil(Math.random()*10);; 
     let adivinanza = parseInt(document.getElementById("adivinanza").value);
     let mensaje = "";
+    if (random == adivinanza) {
+    mensaje = "¡Felicidades, adivinaste el número!";
+    }else{
+    mensaje = "Lo siento, el número era "+random;
+    }
+    document.getElementById("adivinarSalida").innerText = mensaje;
 }
