@@ -31,7 +31,7 @@ function evaluarDescuento() {
     document.getElementById("descuentoSalida").innerText = mensaje;
 }
 function jugarAdivinanza() {
-    let random = Math.ceil(Math.random()*10);; 
+    let random = Math.ceil(Math.random()*10)+1;
     let adivinanza = parseInt(document.getElementById("adivinanza").value);
     let mensaje = "";
     if (random == adivinanza) {
