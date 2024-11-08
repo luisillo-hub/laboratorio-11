@@ -1,9 +1,9 @@
 function VerificarCalificacion() {
-    let calificacion = parseInt(document.getElementById("calificacion").value);
+    let grado = parseInt(document.getElementById("grado").value);
     let mensaje = "";
-    if (calificacion >= 90) {
+    if (grado >= 90) {
        mensaje = "Aprobado con Honores."; 
-    }else if (calificacion>=70) {
+    }else if (grado>=70) {
          mensaje = "Aprobado.";
     }else{
         mensaje = "Reprobado."; 
@@ -11,9 +11,9 @@ function VerificarCalificacion() {
     document.getElementById("gradoSalida").innerText = mensaje;
 }
 function determinarParidad() {
-    let numero = parseInt(document.getElementById("numero").value);
+    let parImpar = parseInt(document.getElementById("parImpar").value);
     let mensaje = "";
-    if (numero%2 == 0) {
+    if (parImpar%2 == 0) {
         mensaje = "El numero es par."; 
     }else {
         mensaje = "El numero es impar."; 
@@ -21,20 +21,20 @@ function determinarParidad() {
     document.getElementById("parImparSalida").innerText = mensaje;
 }
 function evaluarDescuento() {
-    let monto = parseInt(document.getElementById("monto").value);
+    let descuento = parseInt(document.getElementById("descuento").value);
     let mensaje = "";    
-    if (monto > 100) {
-         mensaje = "Con el 10% de descuento el nuevo monto es: "+monto*0.9; 
+    if (descuento > 100) {
+         mensaje = "Con el 10% de descuento el nuevo monto es: "+descuento*0.9; 
     }else {
         mensaje = "No aplica descuento."; 
     }
     document.getElementById("descuentoSalida").innerText = mensaje;
 }
 function jugarAdivinanza() {
-    let random = Math.ceil(Math.random()*10)+1;
-    let adivinanza = parseInt(document.getElementById("adivinanza").value);
+    let random = Math.ceil(Math.random()*10)+1; 
+    let adivinar = parseInt(document.getElementById("adivinar").value);
     let mensaje = "";
-    if (random == adivinanza) {
+    if (random == adivinar) {
     mensaje = "¡Felicidades, adivinaste el número!";
     }else{
     mensaje = "Lo siento, el número era "+random;
